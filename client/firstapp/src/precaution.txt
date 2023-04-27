@@ -1,0 +1,16 @@
+ const recievemessage=(data)=>{
+        const sender=sessionStorage.getItem('username')
+        if(data.reciever===sender && data.author===sendto){
+            if(messageid.includes(data._id) ===false){
+                 setAllMessages((list)=>[...list,data])
+                 messageid.push(data._id)
+                 console.log(data)
+                 console.log(sendto)
+                
+            }
+          
+            
+      }
+       
+        
+    }

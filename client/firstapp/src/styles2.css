@@ -1,0 +1,154 @@
+.login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+   
+    background: linear-gradient(45deg,rgb(111, 197, 231), rgb(192, 211, 245)) ;
+   
+
+}
+
+.login-container2 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+   
+    background: rgb(242, 246, 247) ;
+   
+
+}
+.progress {
+    align-self: center;
+    color: rgb(173, 217, 235);
+    font-size: 9.5px;
+    font-style: italic;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+.login-class {
+   justify-self: center;
+    width: 400px;
+    height: 400px;
+    background-color: white;
+    display: flex;
+    box-shadow: 2px 2px 2px white;
+   
+}
+
+.login-class2 {
+    justify-self: center;
+     width: 400px;
+     height: 400px;
+     background-color: rgb(154, 214, 238);
+     display: flex;
+     box-shadow: 2px 2px 2px rgb(100, 210, 253);
+    
+ }
+.login-form {
+    align-self: center;
+    padding-left: 8px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.username-input, .username-input2 {
+    width: 260px;
+    height: 45px;
+    margin-left: 40px;
+    margin-bottom: 20px;
+   padding-left: 30px;
+    font-size: 18px;
+}
+.login-button {
+
+    margin-left: 40px;
+    width: 300px;
+    background-color:  rgb(100, 210, 253);
+    height: 50px;
+    color: white;
+    font-size: 17px;
+   border-color: white;
+}
+
+.login-button2 {
+    position: fixed;
+    margin-top: 323px;
+    margin-left: 50px;
+    width: 300px;
+    background-color:  rgb(100, 210, 253);
+    height: 50px;
+    color: white;
+    font-size: 17px;
+   border-color: white;
+}
+
+.login-button3 {
+
+    margin-left: 40px;
+    width: 300px;
+    background-color:rgb(199, 190, 190);  
+    height: 50px;
+    color: black;
+    font-size: 17px;
+   border-color: rgb(100, 210, 253);
+}
+::placeholder{
+    
+    font-size: 15px;
+    padding-left: 10px;
+}
+
+.registrationclass {
+    
+    margin-top: 10px;
+    margin-left: 60px;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(62, 159, 197);
+}
+
+.expand-menu-items {
+  
+    padding-left: 20px;
+    
+    color: white;
+    
+}
+
+.close-menu-items {
+    padding-top: 10px;
+    padding-left: 20px;
+    color: gray;
+    
+
+}
+
+.close-menu-items:hover {
+    color:rgb(15, 21, 24);
+}
+
+.profile {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.user-selected {
+    display: block;
+}
+
+
+.time {
+    font-size: 9px;
+    padding-left: 3px;
+   
+}

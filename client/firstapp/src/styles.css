@@ -1,0 +1,393 @@
+
+.container {
+    margin-top: 1vh;
+    margin-left: 5vw;
+    height: 95vh;
+    width: 90vw;
+    display: flex;
+    align-self: center ;
+    justify-self: center;
+    flex-direction: row;
+    border: 1px solid rgb(0, 195, 255);
+    
+
+}
+.left-side {
+   
+    width: 30vw;
+    
+    border-right: 1px solid rgb(0, 195, 255) ;
+    
+}
+
+.right-side {
+    background-image:linear-gradient(rgba(255,255,255,0.3), rgba(255,255,255,0.3)), url("../public/rm222batch5-kul-03.jpg");
+
+   width: 60vw;
+   height: 95vh;
+   transition: opacity 500ms ;
+}
+
+.some-info {
+    width: 60vw;
+    height: 10vh;
+    background-color: rgb(166, 220, 241);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+}
+
+.extra {
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-area{
+    height: 75vh;
+    overflow-y: auto;
+
+
+}
+
+
+.send-area{
+    display: flex;
+    flex-direction: row;
+    height:10vh;
+    background-color: rgb(166, 220, 241);
+
+}
+
+.call-class, .video-class, .more-class {
+    padding-right:8px ;
+}
+
+.top-side {
+   height: 8vh;
+    width:30vw;
+     background-color:rgb(129, 210, 241);;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+
+.send-message {
+    margin-left: 20px;
+    margin-top: 15px;
+    width: 50vw;
+    margin-right: 15px;
+    border-radius: 4px;
+    height: 4vh;
+    border-color: rgb(156, 231, 250);
+    
+    
+}
+
+input[type=text]:focus {
+    
+    outline-color: rgb(156, 231, 250);
+}
+
+.send-message-button {
+    width: 6vw;
+    height: 4vh;
+}
+
+.bottom-side {
+    padding-left: 10px;
+
+}
+
+ul {
+    list-style-type: none;
+}
+.header-atleftbottom{
+    padding-top: 20px;
+    padding-left: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.message {
+    align-self: flex-end;
+    margin-top: 8px;
+    margin-right: 10px;
+    max-width: 30vw;
+   
+    margin-bottom: 5px ;
+    background-color: rgb(201, 204, 245);
+    border-radius: 5px;
+   
+}
+.main-message {
+    padding-left: 1px;
+    margin-right: 10px;
+    margin-top: 1px;
+    margin-bottom: 6px;
+}
+
+.all-message{
+    display: flex;
+    flex-direction: column;
+}
+.reply-message {
+    align-self: flex-start;
+    margin-top: 8px;
+    margin-left: 10px;
+  
+    max-width: 30vw;
+    margin-bottom: 5px ;
+    background-color: rgb(156, 231, 250);
+    border-radius: 5px;
+    
+}
+.main-message {
+    padding-left: 8px;
+}
+
+.contacts {
+    margin-left: -10px;
+    width: 200px;
+    height:40px;
+    
+    margin-bottom: -8px;
+}
+
+
+
+.contact-link {
+    text-decoration: none;
+}
+.contact-name {
+    padding-left: 20px;
+    color: black;
+}
+
+.contact-class {
+    margin-left: -10px;
+    width:30vw;
+    height:10vh;
+
+    background-color: white;
+    border-bottom: 1px solid  rgb(185, 225, 241);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    
+}
+
+.contact-class:hover, .nav-class:hover {
+    background-color: rgb(203, 234, 241);
+}
+
+.contact-meta {
+    margin-left: 2vw;
+    display: grid;
+    align-items: center;
+    grid-template-columns: 40px 40px 40px;
+    column-gap: 1px;
+}
+
+img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+
+.no-profiel {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: aqua;
+    margin-top: -20px;
+}
+.no-profiel2 {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    font-size: 20px;
+    background-color: aqua;
+   
+}
+
+
+.contact-main {
+    font-size: 15px;
+    
+
+}
+.contact-main2 {
+    padding-top: 15px;
+}
+
+.contact-main3{
+    padding-left: 17px;
+    margin-top: 10px;
+}
+
+.menu {
+    width: 20vw;
+    align-self: center;
+    height: 4vh;
+    background-color: white;
+    border: 1px solid white;
+}
+
+.username-class {
+    padding-left: 10px;
+    font-size: 18px;
+}
+
+.send-files-button {
+    margin-left:1vw;
+    
+
+}
+
+.call-class, .video-class {
+    margin-top: 14px;
+    width: 25px;
+    height: 25px;
+    color: gray;
+    padding-right: 30px;
+}
+
+.call-class:hover {
+    color:rgb(32, 78, 92)
+} 
+.video-class:hover  {
+    color:rgb(32, 78, 92)
+} 
+
+.side-bar {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: 0vw;
+    height: 95vh;
+    background-color: white;  
+    border-right: 1px solid rgb(76, 131, 151);
+    border-bottom: 1px solid rgb(76, 131, 151);
+    transition: width 275ms ease-out;
+   
+}
+
+.user-profile-class {
+    height:20vh;
+    background-color: rgb(179, 225, 245);
+    border-bottom: 1px solid rgb(0, 195, 255);
+}
+
+.nav-class {
+    padding-left: 0; padding-right: 0;
+    border-left-width: 0; border-right-width: 0;
+    white-space: nowrap;
+    width:0px;
+    height:10vh;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    background-color: white;
+    border-bottom: 1px solid  rgb(185, 225, 241);
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    transition: all 275ms ease-out;
+}
+
+.attach {
+    padding-top: 20px;
+    padding-left: 15px;
+    color: gray;
+}
+
+.attach:hover {
+    color: black;
+}
+input[type="file"] {
+   
+    display: none;
+}
+.file-man {
+   
+    width: 130px;
+    height: 30px;
+    background-color: rgb(109, 209, 109);
+    align-self: center;
+    border: 2px solid rgb(109, 209, 109);
+    box-shadow: 1px 1px 1px rgb(115, 192, 115);
+    color: white;
+    
+    margin-left: 20px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.main-title {
+    padding-left: 20px;
+    margin-top: -20px;
+    color: rgb(0, 195, 255);
+    align-self: center;
+    
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.emojis {
+    align-self: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    
+    padding-left: 4px;
+    border: 1px solid white;
+    margin-right: 6px;
+
+}
+
+.emoji-data {
+margin-top: -440px;
+position: fixed;
+right: 5.2vw;
+   
+
+}
+
+@media only screen and (max-width: 900px){
+    
+    .emoji-data {
+        position: fixed;
+        right: 5.2vw;
+        
+     
+     }
+}
+
+::-webkit-scrollbar{
+    width: 4px;
+}
+
+::-webkit-scrollbar-track{
+    background-color:rgb(206, 235, 247);
+}
+
+::-webkit-scrollbar-thumb{
+    background-color:rgb(129, 210, 241);
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+.send-image {
+    width: 18vw;
+    height: 18vw;
+    border-radius: 0%;
+}
+
+.close-menu-items {
+    display: none;
+}
+

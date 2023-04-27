@@ -1,0 +1,34 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.login-class {
+    margin-top: 2% ;
+    width: 400px;
+    height: 400px;
+    background-color: gray;
+    display: flex;
+    box-shadow: 2px 2px 2px gray;
+}
+.login-form {
+    align-self: center;
+    justify-self: center;
+    display: flex;
+    flex-direction: column;
+    padding-left: 25%;
+}
+
+.username-input {
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+}
+button {
+    width: 100px;
+    margin-left: 22.5%;
+    height: 30px;
+}

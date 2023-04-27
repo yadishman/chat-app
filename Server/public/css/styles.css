@@ -1,0 +1,131 @@
+
+.container {
+    margin-top: 2%;
+    height: 600px;
+    width:600px;
+    display: flex;
+    flex-direction: row;
+    background-color:rgb(225, 232, 243);
+    margin-left:1% ;
+    margin-right: 25%;
+    box-shadow: 1px 2px 2px 1px gray;
+    
+
+}
+.left-side {
+   
+    width: 200px;
+    background-color:rgb(174, 188, 209);
+    border-right: 20px,solid, white;
+    
+}
+
+.right-side {
+
+   width: 400px;
+    height: 600px;
+   
+}
+
+.some-info {
+    width: 390px;
+    height: 50px;
+    background-color: rgb(201, 204, 245);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 10PX;
+}
+
+.extra {
+    display: flex;
+    flex-direction: row;
+}
+
+.chat-area{
+    height: 500px;
+    overflow-y: auto;
+
+
+}
+.send-area{
+    height:50px;
+    background-color: rgb(147, 153, 236);
+
+}
+
+.call-class, .video-class, .more-class {
+    padding-right:8px ;
+}
+
+.top-side {
+    height: 150px;
+    width: 200px;
+     background-color: rgb(130, 137, 243);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.header-atleft{
+    align-self: center;
+    padding-left: 10px;
+    color: white;
+    font-weight: bold;
+}
+
+.send-message {
+    margin-left: 20px;
+    margin-top: 17px;
+    width: 300px;
+    border-radius: 5px;
+    
+    
+}
+
+.bottom-side {
+    padding-left: 10px;
+
+}
+
+ul {
+    list-style-type: none;
+}
+.header-atleftbottom{
+    padding-top: 20px;
+    padding-left: 40px;
+    color: white;
+    font-weight: bold;
+}
+
+.message {
+    align-self: flex-end;
+    margin-top: 10px;
+    margin-right: 10px;
+    width: 250px;
+    
+    background-color: rgb(201, 204, 245);
+    border-radius: 5px;
+    
+}
+.main-message {
+    padding-left: 8px;
+}
+
+.all-message{
+    display: flex;
+    flex-direction: column;
+}
+.reply-message {
+    align-self: flex-start;
+    margin-top: 10px;
+    margin-left: 10px;
+    width: 250px;
+    
+    background-color: rgb(22, 192, 235);
+    border-radius: 5px;
+    
+}
+.main-message {
+    padding-left: 8px;
+}

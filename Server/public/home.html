@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
+</head>
+<body>
+    <div className="container">
+        <div className="left-side">
+            <div className="top-side">
+                <h1 className="header-atleft">Chat with us</h1>
+            </div>
+            <div className="bottom-side">
+                <h2 className="header-atleftbottom">Friends</h2>
+                <form className="choose-person">
+                    <input type="text" id="receiver">
+                    <button type="submit">OK</button>
+                </form>
+                
+            </div>
+           
+        </div>
+        <div className="right-side">
+            <div className="some-info">
+                <div className="username-class">
+                <p >User</p>
+                </div>
+                <div className="extra">
+                    <p className="call-class">Call</p>
+                <p className="video-class">Video</p>
+                <p className="more-class">More</p>
+                </div>
+               
+            </div>
+            <div className="chat-area">
+                <div className="all-message">
+                    <div className="message" style="background-color:rgb(225, 232, 243); height: 0;">
+                        <p className="main-message"></p>
+                    </div>
+                    <div className="reply-message" style="background-color:rgb(225, 232, 243); height: 0;">
+                        <p className="main-message"></p>
+                    </div>
+                </div>
+            </div>
+            <form className="send-area" id="send-area">
+                <input type="text" className="send-message" id="send">
+                <button type="submit" className="send-message-buttton">send</button>
+            </form>
+        </div>
+
+
+    </div>
+<script type="text/javascript" src="/socket.io/socket.io.js"></script>
+ <script src="./js/main.js"></script>
+</body>
+</html>
