@@ -1,24 +1,17 @@
 import { useNavigate } from "react-router-dom"
+import { getUser } from "./controller/messagecontroller"
 
-const Auth= ()=>{
+const Auth= (props)=>{
 
     const navigate= useNavigate()
    
     const onSubmit= (data)=>{
         const username=data
-        fetch("http://localhost:4000/users/" + username).then(
-            resp=>{return resp['status']}
-        ).then(data=>
-            {
-                if (data===200){
-                sessionStorage.setItem("username", username)
-                navigate("/contacts")}
-            else {
-                console.log('user does not exist')
-            }
-        })
 
+        getUser(username,navigate, props.setIsOnline)
+      
     }
+
     return (<div className="login-container">
     <div className="login-class" >
         <div  className="login-form" action="/contacts">
@@ -29,14 +22,8 @@ const Auth= ()=>{
             }}>Login</button>
             <div className="registrationclass"><p className="registerNow"> Don't have an account. Register <a href="/register">Here</a></p></div>
             
-        </div>
-        
-       
+        </div>      
     </div>
-
-    <script>
-        
-    </script>
 </div>);
 }
 

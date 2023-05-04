@@ -51,7 +51,8 @@ let userna='anonymous'
 io.on("connection", socket=>{
    
    
-    console.log("user is conncected")
+    console.log("user is connected")
+    
     socket.on("usermessage", message=>{
         console.log(message)
         socket.broadcast.emit('message', message)
@@ -66,13 +67,28 @@ io.on("connection", socket=>{
         socket.broadcast.emit("fs-shares", {})
     }) 
     socket.on ("file-raw",(data)=>{
-        i+=1
-        console.log(i)
-        console.log(data.buffer.byteLength)
+        
         socket.broadcast.emit("fs-share", data.buffer)
     }) 
+
+    socket.on("calluser", (data)=>{
+       socket.broadcast.emit("recievecall", data)
+    })
+
+    socket.on("call-accept", (data)=>{
+        socket.broadcast.emit("call-accept", data)
+     })
     
+    socket.on("istyping", (data)=>{
+        socket.broadcast.emit("istyping", data)
+    })
+
+    socket.on("finished", ()=>{
+        socket.broadcast.emit("finished")
+    })
     socket.on('disconnect', ()=>{
+
+        
         
         console.log("disconnected")
        
@@ -125,6 +141,7 @@ app.get('/messages/:metadata', async(req,resp)=>{
 
 app.post('/messages',Upload2.single("imagemessage"), async(req,resp)=>{
     const response= req.body
+    console.log(response)
    const username=response["author"]
    const reciever= response["reciever"]
   
@@ -154,8 +171,9 @@ app.post('/messages',Upload2.single("imagemessage"), async(req,resp)=>{
    
 })
 app.post('/createcontact', async (req,resp)=>{
-    const phone= req.body['phonenumber']
-    const sendername= req.body['sendername']
+    const phone= req.body['phone']
+    const sendername= req.body['sender']
+    console.log(req.body)
     console.log(phone, " ", sendername)
     try {
         const creator= await User.findOne({username:sendername})
@@ -203,11 +221,15 @@ app.get('/users/:username',async(req,resp)=>{
     try {
         const user= await User.findOne({username:username})
         
-        user!==null?
-
-        resp.status(200).json({user,contacts:user.contacts}):
-        resp.sendStatus(404)
-
+        if(user!==null){
+            user.isOnline=true
+            user.save()
+            const users= await User.updateMany({"contacts.username":username}, {$set : {
+                "contacts.$.isOnline":true
+            }})
+        resp.status(200).json({user,contacts:user.contacts})}
+        else {
+        resp.sendStatus(404)}
 
     }
     catch(err) {
@@ -215,4 +237,17 @@ app.get('/users/:username',async(req,resp)=>{
         resp.sendStatus(404)
 
     }
+})
+
+app.get('/logout/:username', async(req,resp)=>{
+    const username=req.params.username
+    const user= await User.findOne({username:username})
+    user.isOnline=false
+    user.save()
+    console.log(user)
+    const users= await User.updateMany({"contacts.username":username}, {$set : {
+        "contacts.$.isOnline":false
+    }})
+
+    
 })

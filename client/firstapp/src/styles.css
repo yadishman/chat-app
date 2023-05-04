@@ -202,7 +202,7 @@ img {
     border-radius: 50%;
     font-size: 20px;
     background-color: aqua;
-    margin-top: -20px;
+    margin-top: -15px;
 }
 .no-profiel2 {
     width: 50px;
@@ -270,8 +270,10 @@ img {
     width: 0vw;
     height: 95vh;
     background-color: white;  
-    border-right: 1px solid rgb(76, 131, 151);
+    border-right: 2px solid rgb(76, 131, 151);
     border-bottom: 1px solid rgb(76, 131, 151);
+    border-top: 1px solid rgb(76, 131, 151);
+    
     transition: width 275ms ease-out;
    
 }
@@ -382,8 +384,8 @@ input[type="radio"] {
 }
 
 .send-image {
-    width: 18vw;
-    height: 18vw;
+    width: 28vw;
+    height: 40vh;
     border-radius: 0%;
 }
 
@@ -391,3 +393,100 @@ input[type="radio"] {
     display: none;
 }
 
+.video-container {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.video {
+    background-color:rgb(157, 243, 217);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border :1px solid rgb(109, 122, 72);
+    
+    width:30vw;
+    height: 40vh;
+}
+
+video {
+    width:30vw;
+    height: 40vh;
+}
+
+
+
+.video-globe {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 80vh;
+    width: 70wh;
+    margin-top: 10vh;
+    margin-bottom:10vh;
+    margin-left:15vw;
+    margin-right: 15vw;
+    box-shadow: 2px 2px 2px rgb(135, 211, 221);
+    background-color:rgb(174, 223, 243);
+}
+
+.call-to {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: gainsboro;
+    font-size: 21px;
+    font-weight: bold;
+    color: gray;
+    border: 1px solid rgb(107, 88, 88);
+}
+
+.call-button1 {
+    background-color: greenyellow;
+    margin-top: 30px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid green;
+    color: gray;
+}
+.call-button2 {
+    background-color: rgb(235, 250, 32);
+    margin-top: 30px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid rgb(50, 233, 50);
+    color: gray;
+}
+.call-button3 {
+    background-color: red;
+    margin-top: 30px;
+    width: 100px;
+    height: 30px;
+    border: 1px solid rgb(241, 71, 80);
+    color: white;
+}
+
+.notification {
+    display: flex;
+    flex-direction: column;
+
+    position: fixed;
+    top: 5px;
+    left: 40vw;
+    border: 1px solid black;
+    background-color: rgb(170, 247, 247);
+    width: 300px;
+    height: 100px;
+    z-index: 1000;
+}
+
+.cancel-or-open {
+    align-self: flex-end;
+}

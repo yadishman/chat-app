@@ -17,6 +17,12 @@ const userSchema= new schema(
             type : String,
         }
         ,
+
+        isOnline : {
+            type: Boolean,
+            default: false,
+        },
+        
         contacts: {
             type: Array
         }

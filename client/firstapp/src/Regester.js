@@ -1,5 +1,6 @@
 import { BiArrowFromRight } from "react-icons/bi"
 import { useNavigate } from "react-router-dom"
+import { createUser } from "./controller/messagecontroller"
 
 
 const Register= ()=>{
@@ -8,25 +9,7 @@ const Register= ()=>{
     const  reguser= (e)=>{
         e.preventDefault()
         const formdata= new FormData(document.getElementById("register"))
-        console.log(Array.from(formdata))
-        try{
-        fetch("http://localhost:4000/createuser", {
-            method: 'POST',
-           
-            body: formdata
-        }).then((resp)=>{
-            return resp['status']
-        }).then((data)=>{
-            data===201?(
-            navigate("/"))
-           :
-            console.log("fool")
-        })}
-        catch(e){
-            return false
-        }
-        return false
-            
+        createUser(formdata,navigate)      
         
     }
     return (<div className="login-container">
@@ -37,15 +20,11 @@ const Register= ()=>{
             <input className="username-input" placeholder="UserName" minLength={3}  name="username"/>
             <input className="username-input2" placeholder="PhoneNumber" minLength={3} name="phonenumber"/>
             <input type="file" name="profilepicture" id="files"/>
-            <label for="files" className="file-man">upload picture</label>
+            <label htmlFor="files" className="file-man">upload picture</label>
             <button className="login-button" type="submit">Register</button>
         </form>
-       
-        
     </div>
-    <script>
-        
-    </script>
+    
 </div>);
 }
 
