@@ -75,6 +75,9 @@ io.on("connection", socket=>{
        socket.broadcast.emit("recievecall", data)
     })
 
+    socket.on("calluserv", (data)=>{
+        socket.broadcast.emit("recievecallv", data)
+     })
     socket.on("call-accept", (data)=>{
         socket.broadcast.emit("call-accept", data)
      })

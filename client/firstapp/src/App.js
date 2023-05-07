@@ -6,7 +6,8 @@ import Register from './Regester';
 import CreateContact from './CreateContact';
 import { useState } from 'react';
 import VideoCall from './VideoCall';
-const socket= io('http://192.168.0.120:4000')
+import VoiceCall from './VoiceCall';
+const socket= io('http://localhost:4000')
 
 function App() {
     const [isOnline,setIsOnline]= useState()
@@ -19,6 +20,7 @@ function App() {
                 <Route exact path='/addcontacts' element={<CreateContact />}></Route>
                 <Route exact path='/contacts' element={<Whole socket={socket} isOnline={isOnline} setIsOnline={setIsOnline} />}></Route>
                 <Route exact path='/call' element={<VideoCall socket={socket}/>}></Route>
+                <Route exact path='/Voicecall' element={<VoiceCall socket={socket}/>}></Route>
                 
             </Route>
         )
